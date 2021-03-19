@@ -1,0 +1,53 @@
+{
+  "name": "@rukmanamreza/batch-delegate",
+  "version": "7.0.3",
+  "description": "A set of utils for faster development of GraphQL tools",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ardatan/graphql-tools.git"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "typescript": {
+    "definition": "dist/index.d.ts"
+  },
+  "peerDependencies": {
+    "graphql": "^14.0.0 || ^15.0.0"
+  },
+  "buildOptions": {
+    "input": "./src/index.ts"
+  },
+  "dependencies": {
+    "@graphql-tools/delegate": "^7.0.5",
+    "@rukmanamreza/dataloader": "2.0.0",
+    "tslib": "~2.0.1"
+  },
+  "devDependencies": {
+    "@graphql-tools/schema": "7.0.0",
+    "@graphql-tools/stitch": "7.0.4",
+    "@graphql-tools/utils": "7.0.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist"
+  },
+  "bugs": {
+    "url": "https://github.com/ardatan/graphql-tools/issues"
+  },
+  "homepage": "https://github.com/ardatan/graphql-tools#readme",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts:transpile": "tsc --project tsconfig.build.json && tsc --project tsconfig.build.es5.json",
+    "build": "yarn ts:transpile && bob build"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "author": ""
+}
